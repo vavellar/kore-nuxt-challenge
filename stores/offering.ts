@@ -1,9 +1,11 @@
 import { defineStore } from 'pinia'
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import type { Offering } from '~/types/offering'
+import {Summary, Terms} from "./types/offering";
 
 export const useOfferingStore = defineStore('offering', () => {
-    const data = ref(null)
-    const loading = ref(false)
+    const data = ref<Offering | null>(null)
+    const loading = ref<boolean>(false)
 
     async function fetchOffering(id: string) {
         loading.value = true
@@ -14,5 +16,23 @@ export const useOfferingStore = defineStore('offering', () => {
         }
     }
 
-    return { data, loading, fetchOffering }
+
+    const summary = computed<Summary>(() => data.value?.summary ?? null)
+
+    const documents = computed(() => data.value?.documents ?? [])
+
+    const terms = computed<Terms>(() => data.value?.terms ?? null)
+
+    const team = computed(() => data.value?.team ?? [])
+
+
+    return {
+        data,
+        loading,
+        fetchOffering,
+        summary,
+        documents,
+        terms,
+        team,
+    }
 })
