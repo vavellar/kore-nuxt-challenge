@@ -1,19 +1,75 @@
-<script setup lang="ts">
-const props = defineProps({ summary: { type: Object, default: () => ({}) } })
-</script>
-
 <template>
-  <div class="bg-white p-6 rounded shadow">
-    <div class="text-sm text-gray-500">Funding Goal</div>
-    <div class="text-3xl font-bold my-2">${{ props.summary?.raised ?? '0' }}</div>
-    <div class="text-xs text-gray-400">of ${{ props.summary?.raiseGoal }}</div>
+  <div class="w-full max-w-md bg-white border-2 border-white rounded-2xl p-6 shadow-sm">
+    <div class="flex items-center justify-between mb-1">
+      <p class="text-gray-600 text-sm mt-2">Funding Goal</p>
+      <div class="px-4 py-1 border-2 border-gray-300 rounded-full text-gray-600 text-sm whitespace-nowrap">
+        RegCF
+      </div>
+    </div>
 
-    <ul class="mt-4 text-sm text-gray-600 space-y-1">
-      <li><strong>Min Investment:</strong> ${{ props.summary?.minInvestment }}</li>
-      <li><strong>Deadline:</strong> {{ props.summary?.closeDate }}</li>
-      <li><strong>Duration:</strong> {{ props.summary?.durationMonths }} months</li>
-    </ul>
+    <p class="text-xl font-light text-black">{{ summary.raiseGoal }}</p>
 
-    <button class="mt-6 w-full py-2 bg-blue-600 text-white rounded">Invest Now</button>
+    <p class="text-blue-light font-light text-xl">Funds Raised</p>
+    <p class="text-3xl font-bold text-blue-light">{{ summary.raised }}</p>
+
+    <hr class="my-4 border-gray-300">
+
+    <div class="flex items-baseline gap-2 text-[16px]">
+      <span class="font-bold text-black text-xl">{{ summary.minInvestiment }}</span>
+      <span class="text-gray-600 text-xl">Minimum Investment</span>
+    </div>
+
+    <hr class="my-4 border-gray-300">
+
+    <p class="text-gray-600 font-light text-lg">Deadline:
+      <span class="font-bold text-black ml-1">{{ summary.closeDate }}</span>
+    </p>
+
+    <p class="mt-3 text-gray-600 text-lg font-light">
+      Type of Security:
+      <span class="font-bold text-black">Revenue Share Agreement</span>
+    </p>
+
+    <p class="mt-3 text-gray-600 font-light text-lg">
+      Revenue Share Duration:
+      <span class="font-bold text-black">{{ summary.durationMonths }}</span>
+    </p>
+
+    <div class="mt-8">
+      <BaseButton label="Invest Now" variant="primary" />
+
+      <div class="text-center mt-4">
+        <a href="#" class="text-black underline font-medium">
+          View Offering Circular
+        </a>
+      </div>
+    </div>
   </div>
+
 </template>
+<script setup lang="ts">
+import BaseButton from "./BaseButton.vue";
+
+interface Summary {
+  raiseGoal: number
+  raised: number
+  minInvestment: number
+  closeDate: string
+  durationMonths: number
+}
+
+withDefaults(
+    defineProps<{
+      summary: Summary
+    }>(),
+    {
+      summary: () => ({
+        raiseGoal: 0,
+        raised: 0,
+        minInvestment: 0,
+        closeDate: '',
+        durationMonths: 0
+      })
+    }
+)
+</script>

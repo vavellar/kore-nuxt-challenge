@@ -1,25 +1,10 @@
 <template>
-  <div class="min-h-screen bg-gray-50 pb-12">
+  <div class="min-h-screen bg-gray-50 pb-12 max-w-[1920px] mx-auto">
     <Header />
+  <div class="mt-16">
+  <OfferingHeader :data="store.data"/>
+  </div>
 
-    <div class="bg-blue-200">
-      <div class="col-span-8">
-        <OfferingHeader :data="store.data" />
-      </div>
-      <div  class="col-span-8">
-        <OfferingHeroVideo :videoUrl="store.data?.video" />
-      </div>
-    </div>
-    <div class="col-span-4">
-      <div class="mt-6 space-y-6">
-        <OfferingTerms :terms="store.data?.terms" />
-        <OfferingDocuments :documents="store.data?.documents" />
-        <TeamSection :team="store.data?.team" />
-        <MarketingPlan :plan="store.data?.marketingPlan" />
-        <FaqSection :faq="store.data?.faq" />
-      </div>
-      <OfferingSummaryCard :summary="store.data?.summary" />
-    </div>
   </div>
 </template>
 
