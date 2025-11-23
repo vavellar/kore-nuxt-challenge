@@ -10,10 +10,10 @@
           <img src="../../assets/icons/logo.svg" class="mr-1"/>
           <h1 class="text-2xl">Kore</h1>
         </div>
-       <div class="flex text-white flex-col justify-evenly item-center">
-         <h2 class="text-2xl font-bold">Kore</h2>
-         <h3 class="text-xl font-bold">Lorem ipsum dolor sit</h3>
-       </div>
+        <div class="flex text-white flex-col justify-evenly item-center">
+          <h2 class="text-2xl font-bold">Kore</h2>
+          <h3 class="text-xl font-bold">Lorem ipsum dolor sit</h3>
+        </div>
       </div>
       <div class="w-full flex justify-between items-center mt-4 flex-wrap gap-4 my-4">
         <div class="flex gap-3">
@@ -67,7 +67,7 @@
 
         </div>
       </div>
-      <OfferingSummaryCard :summary="data?.summary"/>
+      <SummaryCard />
       <p class="text-white text-sm font-light mt-6 text-center">
         Purchased securities are not currently tradeable. Expect to hold your investment until the company lists on a national exchange or is acquired.
       </p>
@@ -75,7 +75,5 @@
   </div>
 </template>
 <script setup lang="ts">
-import OfferingSummaryCard from "./OfferingSummaryCard.vue";
-
-defineProps({ data: { type: Object, default: () => ({}) } })
+import SummaryCard from "./components/SummaryCard.vue";
 </script>

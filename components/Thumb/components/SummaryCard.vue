@@ -7,22 +7,22 @@
       </div>
     </div>
 
-    <p class="text-xl font-light text-black">{{ summary.raiseGoal }}</p>
+    <p class="text-xl font-light text-black">{{ format(summary.raiseGoal) }}</p>
 
     <p class="text-blue-light font-light text-xl">Funds Raised</p>
-    <p class="text-3xl font-bold text-blue-light">{{ summary.raised }}</p>
+    <p class="text-3xl font-bold text-blue-light">{{ format(summary.raised) }}</p>
 
     <hr class="my-4 border-gray-300">
 
     <div class="flex items-baseline gap-2 text-[16px]">
-      <span class="font-bold text-black text-xl">{{ summary.minInvestiment }}</span>
+      <span class="font-bold text-black text-xl">{{ format(summary.minInvestment) }}</span>
       <span class="text-gray-600 text-xl">Minimum Investment</span>
     </div>
 
     <hr class="my-4 border-gray-300">
 
     <p class="text-gray-600 font-light text-lg">Deadline:
-      <span class="font-bold text-black ml-1">{{ summary.closeDate }}</span>
+      <span class="font-bold text-black ml-1">{{ formatMonthYear(summary.closeDate) }}</span>
     </p>
 
     <p class="mt-3 text-gray-600 text-lg font-light">
@@ -48,28 +48,11 @@
 
 </template>
 <script setup lang="ts">
-import BaseButton from "./BaseButton.vue";
-
-interface Summary {
-  raiseGoal: number
-  raised: number
-  minInvestment: number
-  closeDate: string
-  durationMonths: number
-}
-
-withDefaults(
-    defineProps<{
-      summary: Summary
-    }>(),
-    {
-      summary: () => ({
-        raiseGoal: 0,
-        raised: 0,
-        minInvestment: 0,
-        closeDate: '',
-        durationMonths: 0
-      })
-    }
-)
+import {useOffering} from "../../../composables/useOffering";
+import BaseButton from "../../BaseButton.vue";
+import {useMoney} from "../../../composables/useMoney";
+import {useDate} from "../../../composables/useDate";
+const { summary } = useOffering()
+const { format } = useMoney()
+const { formatMonthYear} = useDate()
 </script>
