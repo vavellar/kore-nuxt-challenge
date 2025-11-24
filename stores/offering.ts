@@ -12,8 +12,6 @@ export const useOfferingStore = defineStore('offering', () => {
         loading.value = true
         error.value = ''
 
-
-
         try {
             if (id !== '1' && id !== '2') {
                 throw new Error('Invalid offering ID. Only "1" and "2" are supported.')
