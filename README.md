@@ -23,6 +23,8 @@ public/         → Static files (images, icons, etc.)
 
 * The app fetches data from a mocked API located in the `server/` folder.
 * Only the following IDs are available: `1` and `2`. Requests for other IDs will return an error.
+![Error Page](./public/images/error-page.png)
+* The information fetched by APi are displayed in the SummaryCard and the Offering Terms components.
 * Fully **responsive** — accessible on mobile and desktop devices.
 
 
