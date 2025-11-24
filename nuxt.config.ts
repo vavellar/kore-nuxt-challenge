@@ -1,5 +1,7 @@
 export default defineNuxtConfig({
-  css: ['../public/css/main.css'],
+  css: [
+    '../assets/css/tailwind.css'
+  ],
   ssr: true,
   nitro: {
     preset: 'netlify'
