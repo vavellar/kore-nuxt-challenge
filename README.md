@@ -9,6 +9,7 @@ This repository contains a technical challenge for Kore, built with **Nuxt 3 SSR
 ```
 app/            → Root Vue component (`app.vue`) and layouts
 components/     → Reusable Vue.js components
+composables/    → Vue 3 composables to encapsulate logic
 pages/          → Nuxt.js pages that define routes
 assets/         → Stylesheets and static assets
 store/          → Pinia store files for state management
