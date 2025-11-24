@@ -3,7 +3,7 @@
     <div class="footer-container">
       <div>
         <div class="footer-logo">
-          <img src="../../assets/icons/logo-white.svg" class="mr-1"/>
+          <img src="/icons/logo-white.svg" class="mr-1"/>
           <span class="text-2xl font-bold">Kore</span>
         </div>
 

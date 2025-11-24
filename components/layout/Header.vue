@@ -2,7 +2,7 @@
   <div class="navbar">
     <div class="navbar-container">
       <div class="navbar-logo">
-        <img src="../../assets/icons/logo.svg" class="mr-1" />
+        <img src="/icons/logo.svg" class="mr-1" />
         <h1 class="text-2xl">Kore</h1>
       </div>
 

@@ -8,7 +8,7 @@
 
       <div class="header-wrapper">
         <div class="logo-box">
-          <img src="../../assets/icons/logo.svg" class="mr-1" />
+          <img src="/icons/logo.svg" class="mr-1" />
           <h1>Kore</h1>
         </div>
 
@@ -26,7 +26,7 @@
 
         <div class="tags-right">
           <div class="tag-filled">
-            <img src="../assets/icons/calendar.svg" class="icon" />
+            <img src="/icons/calendar.svg" class="icon" />
             213 Days Left
           </div>
 
@@ -37,7 +37,7 @@
       </div>
 
       <div class="thumbnail-section">
-        <img src="../assets/images/ThumbNail.svg" class="thumb" />
+        <img src="/images/ThumbNail.svg" class="thumb" />
         <p class="thumb-url">https://site.com</p>
       </div>
     </div>
@@ -48,19 +48,19 @@
 
         <div class="share-icons">
           <div class="icon-circle">
-            <img src="../assets/icons/facebook.svg" class="icon" />
+            <img src="/icons/facebook.svg" class="icon" />
           </div>
 
           <div class="icon-circle">
-            <img src="../assets/icons/LinkedIn.svg" class="icon" />
+            <img src="/icons/LinkedIn.svg" class="icon" />
           </div>
 
           <div class="icon-circle">
-            <img src="../assets/icons/twitter.svg" class="icon" />
+            <img src="/icons/twitter.svg" class="icon" />
           </div>
 
           <div class="icon-circle">
-            <img src="../assets/icons/envelope.svg" class="icon" />
+            <img src="/icons/envelope.svg" class="icon" />
           </div>
         </div>
       </div>

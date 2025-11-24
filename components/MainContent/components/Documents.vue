@@ -11,7 +11,7 @@
         </div>
 
         <div class="doc-file">
-          <img src="../../../assets/icons/document.svg" class="doc-icon" />
+          <img src="/icons/document.svg" class="doc-icon" />
           <p class="doc-filename">FileName_GoesHere.pdf</p>
         </div>
       </div>

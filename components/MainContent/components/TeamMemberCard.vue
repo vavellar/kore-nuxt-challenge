@@ -19,17 +19,17 @@
 
       <div class="social-wrapper">
         <div class="social-item">
-          <img src="../../../assets/icons/LinkedIn.svg" />
+          <img src="/icons/LinkedIn.svg" />
           <span>LinkedIn</span>
         </div>
 
         <div class="social-item">
-          <img src="../../../assets/icons/facebook.svg" />
+          <img src="/icons/facebook.svg" />
           <span>Facebook</span>
         </div>
 
         <div class="social-item">
-          <img src="../../../assets/icons/twitter.svg" />
+          <img src="/icons/twitter.svg" />
           <span>X</span>
         </div>
       </div>
