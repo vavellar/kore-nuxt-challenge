@@ -6,7 +6,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus erat velit, non interdum lorem efficitur eu. Etiam hendrerit tortor at libero auctor hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus erat velit, non interdum lorem efficitur eu. Etiam hendrerit tortor at libero auctor hendrerit.
       </p>
     </div>
-    <div  class="grid grid-cols-2 grid-rows-1 gap-x-1 gap-y-5">
+    <div  class="grid grid-cols-2 grid-rows-1 gap-x-5 gap-y-5">
       <TeamMemberCard
           position="Director of Product Marketing"
           bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."

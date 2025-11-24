@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-[0.5fr_2fr] grid-rows-1 gap-10 px-20 py-12">
+  <div class="grid grid-cols-[0.5fr_2fr] grid-rows-1 gap-10 px-32 py-12">
     <div class="sticky top-20 h-max">
       <div class="flex flex-col gap-2">
         <NuxtLink class="text-blue-light font-semibold cursor-pointer hover:text-blue-dark" v-for="(option, index) in options" :key="index"   :to="{ path: $route.fullPath.split('#')[0], hash: `#${option.to}` }">

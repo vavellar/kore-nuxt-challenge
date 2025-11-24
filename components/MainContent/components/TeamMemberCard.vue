@@ -1,5 +1,7 @@
 <template>
-  <div class="max-w-md w-full bg-white rounded-2xl border border-blue-light">
+  <div
+      class="w-full bg-white rounded-2xl border border-blue-light max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl"
+  >
     <div class="text-white p-8 text-center">
       <div class="w-24 h-24 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4">
         <img
