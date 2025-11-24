@@ -21,19 +21,22 @@
 
 <script setup>
 import {useOffering} from "../../../composables/useOffering.js";
+import {useMoney} from "../../../composables/useMoney.js";
+import {useDate} from "../../../composables/useDate.js";
 
 
 const { terms } = useOffering()
-
+const { format } = useMoney()
+const { formatMonthYear } = useDate()
 const termsList = [
   { label: 'Regulation', value: terms.value.regulation },
   { label: 'Offering Type', value: terms.value.offeringType },
   { label: 'Security Type', value: terms.value.securityType },
-  { label: 'Target Offering', value: terms.value.targetOffering },
-  { label: 'Max Offering', value: terms.value.maxOffering },
-  { label: 'Min Investment', value: terms.value.minInvestment },
-  { label: 'Max Investment', value: terms.value.maxInvestment },
+  { label: 'Target Offering', value: format(terms.value.targetOffering) },
+  { label: 'Max Offering', value: format(terms.value.maxOffering) },
+  { label: 'Min Investment', value: format(terms.value.minInvestment) },
+  { label: 'Max Investment', value: format(terms.value.maxInvestment) },
   { label: 'Minimum Hold Period', value: terms.value.holdPeriod },
-  { label: 'Closing Date', value: terms.value.closingDate }
+  { label: 'Closing Date', value: formatMonthYear(terms.value.closingDate) }
 ]
 </script>

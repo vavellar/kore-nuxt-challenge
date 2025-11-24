@@ -53,6 +53,24 @@ export default defineEventHandler((event) => {
   return offerings[id] || {
     id,
     title: `Offering ${id}`,
-    subtitle: 'Default fallback offering'
+    subtitle: 'Default fallback offering',
+    summary: {
+      raiseGoal: 0,
+      raised: 0,
+      minInvestment: 0,
+      closeDate: '2025-03-20',
+      durationMonths: 0
+    },
+    terms: {
+      regulation: 'Regulation A+ Tier 2',
+      offeringType: 'Equity Offering',
+      securityType: 'Common Shares',
+      targetOffering: 0,
+      maxOffering: 0,
+      minInvestment: 0,
+      maxInvestment: 0,
+      holdPeriod: '12 months',
+      closingDate: '2025-12-30T23:59:00-03:00'
+    }
   }
 })

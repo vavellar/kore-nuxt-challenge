@@ -18,16 +18,18 @@
 
 
       <div class="flex justify-center space-x-5">
-        <a
-            v-for="social in socialLinks"
-            :key="social.name"
-            :href="social.url"
-            class="flex items-center space-x-2 text-black font-medium text-sm"
-            target="_blank"
-        >
-          <img :src="`~/assets/icons/${social.icon}.svg`"/>
-          <span>{{ social.name }}</span>
-        </a>
+        <div class="flex items-center space-x-2 text-black font-medium text-sm">
+          <img src="../../../assets/icons/LinkedIn.svg"/>
+          <span>LinkedIn</span>
+        </div>
+        <div class="flex items-center space-x-2 text-black font-medium text-sm">
+          <img src="../../../assets/icons/facebook.svg"/>
+          <span>Facebook</span>
+        </div>
+        <div class="flex items-center space-x-2 text-black font-medium text-sm">
+          <img src="../../../assets/icons/twitter.svg"/>
+          <span>X</span>
+        </div>
       </div>
     </div>
   </div>
