@@ -2,7 +2,7 @@
   <p v-if="error" class="text-red-500 text-center mt-10">
     {{ error }}
   </p>
-  <div class="min-h-screen border border-gray-100 max-w-[1920px] mx-auto" v-else>
+  <div class="min-h-screen w-full border border-gray-100 max-w-[1920px] mx-auto" v-else>
     <Header />
     <div class="mt-20">
       <Thumb />
