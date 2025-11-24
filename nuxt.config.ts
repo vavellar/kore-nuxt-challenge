@@ -1,8 +1,13 @@
 export default defineNuxtConfig({
+  css: [
+    '@/assets/css/tailwind.css'
+  ],
   ssr: true,
-  css: ['../assets/css/tailwind.css'],
   nitro: {
-    preset: 'netlify',
+    preset: 'netlify'
   },
-  modules: ['@pinia/nuxt'],
+  modules: [
+    "@pinia/nuxt",
+    '@nuxtjs/tailwindcss',
+  ]
 })
