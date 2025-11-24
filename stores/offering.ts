@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
-import type { Offering } from './types/offering'
-import { Summary, Terms } from './types/offering'
+import type { Offering } from './types'
+import { Summary, Terms } from './types'
 
 export const useOfferingStore = defineStore('offering', () => {
     const data = ref<Offering | null>(null)

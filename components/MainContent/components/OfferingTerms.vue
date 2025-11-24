@@ -1,33 +1,27 @@
 <template>
-  <div class="border border-blue-light rounded-2xl p-6 w-full bg-white" id="offering-terms">
-    <h2 class="text-blue-600 text-2xl font-semibold mb-4">
-      Offering Terms
-    </h2>
+  <div class="terms-container" id="offering-terms">
+    <h2 class="terms-title">Offering Terms</h2>
 
-    <hr class="border-blue-light mb-6" />
+    <hr class="terms-divider" />
 
-    <div class="space-y-6">
+    <div class="terms-list">
       <div v-for="(item, index) in termsList" :key="index">
-        <div class="text-blue-light text-sm font-medium">
-          {{ item.label }}
-        </div>
-        <div class="text-gray-900 text-lg font-semibold">
-          {{ item.value }}
-        </div>
+        <div class="terms-label">{{ item.label }}</div>
+        <div class="terms-value">{{ item.value }}</div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import {useOffering} from "../../../composables/useOffering.js";
-import {useMoney} from "../../../composables/useMoney.js";
-import {useDate} from "../../../composables/useDate.js";
-
+import { useOffering } from "../../../composables/useOffering.js";
+import { useMoney } from "../../../composables/useMoney.js";
+import { useDate } from "../../../composables/useDate.js";
 
 const { terms } = useOffering()
 const { format } = useMoney()
 const { formatMonthYear } = useDate()
+
 const termsList = [
   { label: 'Regulation', value: terms.value.regulation },
   { label: 'Offering Type', value: terms.value.offeringType },
@@ -40,3 +34,29 @@ const termsList = [
   { label: 'Closing Date', value: formatMonthYear(terms.value.closingDate) }
 ]
 </script>
+
+<style scoped>
+.terms-container {
+  @apply border border-blue-light rounded-2xl p-6 w-full bg-white;
+}
+
+.terms-title {
+  @apply text-blue-600 text-2xl font-semibold mb-4;
+}
+
+.terms-divider {
+  @apply border-blue-light mb-6;
+}
+
+.terms-list {
+  @apply space-y-6;
+}
+
+.terms-label {
+  @apply text-blue-light text-sm font-medium;
+}
+
+.terms-value {
+  @apply text-gray-900 text-lg font-semibold;
+}
+</style>

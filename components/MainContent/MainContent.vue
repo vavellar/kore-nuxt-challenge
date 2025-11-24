@@ -1,40 +1,23 @@
 <template>
-  <div
-      class="
-      grid grid-cols-1 gap-10
-      px-6 py-10
-
-      lg:grid-cols-[0.5fr_2fr]
-      lg:px-32 lg:py-12
-    "
-  >
-    <div
-        class="
-        flex flex-col gap-2
-        lg:sticky lg:top-20 lg:h-max
-      "
-    >
+  <div class="page-grid">
+    <div class="sidebar">
       <NuxtLink
           v-for="(option, index) in options"
           :key="index"
           :to="{ path: $route.fullPath.split('#')[0], hash: `#${option.to}` }"
-          class="
-          text-blue-light font-semibold cursor-pointer
-          hover:text-blue-dark
-          text-base lg:text-lg
-        "
+          class="sidebar-link"
       >
         {{ option.text }}
       </NuxtLink>
     </div>
 
-    <div>
-      <div class="flex flex-col lg:flex-row gap-6">
+    <div class="content">
+      <div class="top-section">
         <OfferingTerms terms="" class="w-full" />
         <Documents terms="" class="w-full" />
       </div>
 
-      <div class="my-6 flex flex-col gap-10">
+      <div class="sections">
         <Team />
         <PerfomanceMarketingPlan />
         <FaqSection />
@@ -57,3 +40,31 @@ const options = [
   { text: "FAQ", to: "faq" },
 ];
 </script>
+
+<style scoped>
+.page-grid {
+  @apply grid grid-cols-1 gap-10 px-6 py-10
+  lg:grid-cols-[0.5fr_2fr]
+  lg:px-32 lg:py-12;
+}
+
+.sidebar {
+  @apply flex flex-col gap-2
+  lg:sticky lg:top-20 lg:h-max;
+}
+
+.sidebar-link {
+  @apply text-blue-light font-semibold cursor-pointer
+  hover:text-blue-dark
+  text-base lg:text-lg;
+}
+
+
+.top-section {
+  @apply flex flex-col lg:flex-row gap-6;
+}
+
+.sections {
+  @apply my-6 flex flex-col gap-10;
+}
+</style>
