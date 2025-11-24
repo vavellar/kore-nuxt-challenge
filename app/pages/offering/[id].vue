@@ -1,11 +1,14 @@
 <template>
-  <div class="min-h-screen bg-white max-w-[1920px] mx-auto">
+  <p v-if="error" class="text-red-500 text-center mt-10">
+    {{ error }}
+  </p>
+  <div class="min-h-screen border border-gray-100 max-w-[1920px] mx-auto" v-else>
     <Header />
-  <div class="mt-20">
-    <Thumb />
-    <MainContent />
-  </div>
-  <Footer />
+    <div class="mt-20">
+      <Thumb />
+      <MainContent />
+    </div>
+    <Footer />
   </div>
 </template>
 
@@ -18,7 +21,7 @@ import MainContent from "../../../components/MainContent/MainContent.vue";
 import FaqSection from "../../../components/MainContent/components/FaqSection.vue";
 import Footer from "../../../components/layout/Footer.vue";
 const route = useRoute()
-const { fetch } = useOffering()
+const { fetch, error } = useOffering()
 
 await fetch(String(route.params.id))
 </script>

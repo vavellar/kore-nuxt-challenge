@@ -6,10 +6,9 @@ export function useOffering() {
     const {
         data,
         loading,
+        error,
         summary,
-        documents,
         terms,
-        team,
    } = storeToRefs(store)
 
     const fetch = (id: string) => store.fetchOffering(id)
@@ -18,9 +17,8 @@ export function useOffering() {
         data,
         loading,
         summary,
-        documents,
+        error,
         terms,
-        team,
         fetch
     }
 }
