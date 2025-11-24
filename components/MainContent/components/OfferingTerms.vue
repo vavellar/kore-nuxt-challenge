@@ -1,5 +1,5 @@
 <template>
-  <div class="border border-blue-light rounded-2xl p-6 max-w-xl bg-white" id="offering-terms">
+  <div class="border border-blue-light rounded-2xl p-6 w-full bg-white" id="offering-terms">
     <h2 class="text-blue-600 text-2xl font-semibold mb-4">
       Offering Terms
     </h2>

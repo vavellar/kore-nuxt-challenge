@@ -8,7 +8,6 @@
       lg:px-32 lg:py-12
     "
   >
-    <!-- SIDEBAR / MENU -->
     <div
         class="
         flex flex-col gap-2
@@ -29,9 +28,7 @@
       </NuxtLink>
     </div>
 
-    <!-- CONTENT -->
     <div>
-      <!-- Offering Terms + Documents -->
       <div class="flex flex-col lg:flex-row gap-6">
         <OfferingTerms terms="" class="w-full" />
         <Documents terms="" class="w-full" />
